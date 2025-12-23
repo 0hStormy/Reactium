@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <labwc_config>
   <theme>
-    <name>GTK</name>
+    <name>Reactium</name>
     <dropShadows>yes</dropShadows>
     <icon>Jade</icon>
     <cornerRadius>4</cornerRadius>
