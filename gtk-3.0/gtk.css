@@ -167,12 +167,12 @@ button {
 
 button.suggested-action {
     background-image: linear-gradient(#ffffff, #cee7ce);
-    border: solid 1px #a38b8b;
+    border: solid 1px #8da38b;
 }
 
 button.destructive-action {
     background-image: linear-gradient(#ffffff, #e7cece);
-    border: solid 1px #8da38b;
+    border: solid 1px #a38b8b;
 }
 
 button:hover {
@@ -552,10 +552,19 @@ list row:hover:not(:selected):not(:active) {
     border: none;
 }
 
+paned > separator {
+    min-width: 1px;
+    min-height: 1px;
+    border: dotted 1px #c7d5da;
+}
+
 frame {
     background-image: linear-gradient(#ecf3fa, #d6e5e9);
     box-shadow: inset 0 1px 0 0 #ffffff;
     border: solid 1px #a8bac4;
+}
+
+frame > notebook {
     padding: 4px;
 }
 
@@ -595,6 +604,7 @@ notebook > header.top > tabs > tab:active,
 notebook > header.top > tabs > tab:checked,
 notebook > header.top > tabs > tab:selected {
     margin-bottom: -1px;
+    margin-right: 4px;
     border-bottom-color: #ecf3fa;
     background-image: linear-gradient(#c7d8e2, #ecf3fa);
     border-bottom-left-radius: 0;
@@ -611,6 +621,7 @@ notebook > header.bottom > tabs > tab:active,
 notebook > header.bottom > tabs > tab:checked,
 notebook > header.bottom > tabs > tab:selected {
     margin-top: -1px;
+    margin-right: 4px;
     border-top-color: #c7d7db;
     background-image: linear-gradient(to bottom, #c7d7db, #ced6df);
     border-top-left-radius: 0;
@@ -627,6 +638,7 @@ notebook > header.left > tabs > tab:active,
 notebook > header.left > tabs > tab:checked,
 notebook > header.left > tabs > tab:selected {
     margin-right: -1px;
+    margin-bottom: 4px;
     border-right-color: #c7d7db;
     background-image: linear-gradient(to bottom, #c7d7db, #ced6df);
     border-top-right-radius: 0;
@@ -643,6 +655,7 @@ notebook > header.right > tabs > tab:active,
 notebook > header.right > tabs > tab:checked,
 notebook > header.right > tabs > tab:selected {
     margin-left: -1px;
+    margin-bottom: 4px;
     border-left-color: #c7d7db;
     background-image: linear-gradient(to left, #c7d7db, #ced6df);
     border-top-left-radius: 0;
