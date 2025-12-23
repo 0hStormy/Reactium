@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <theme>
+    <name>GTK</name>
+    <dropShadows>yes</dropShadows>
+    <icon>Jade</icon>
+    <cornerRadius>4</cornerRadius>
+  </theme>
+  <core>
+    <decoration>server</decoration>
+  </core>
+  <placement>
+    <policy>automatic</policy>
+  </placement>
+</labwc_config>
