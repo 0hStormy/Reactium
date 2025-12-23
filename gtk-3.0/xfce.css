@@ -1,0 +1,46 @@
+window.xfce4-panel {
+    box-shadow: inset 0 2px 0 0 #ffffff, inset 0 1px 0 0 #8b9ba3;
+}
+
+window.xfce4-panel button {
+    margin: 2px;
+}
+
+window.xfce4-panel button.flat {
+    min-width: 36px;
+}
+
+window.xfce4-panel #whiskermenu-button {
+    all: unset;
+
+    background-image: url("assets/start.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.25), inset -2px 0 0 0 rgba(0, 0, 0, 0);
+    margin-right: 8px;
+}
+
+window.xfce4-panel #whiskermenu-button:hover {
+    box-shadow: 2px 0 4px 0 #64abd1, inset -2px 0 0 0 #64abd1, inset 0 0 8px 2px #81bedf;
+}
+
+window.xfce4-panel #whiskermenu-button:checked {
+    box-shadow: 2px 0 4px 0 #64abd1, inset -2px 0 0 0 #4d84a1, inset 0 0 8px 2px #5c88a0;
+    transition: 640ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+window.xfce4-panel #whiskermenu-button box image {
+    color: transparent;
+}
+
+window.xfce4-panel #pulseaudio-button {
+    min-width: 36px;
+}
+
+window.xfce4-panel #pulseaudio-button box image {
+    
+}

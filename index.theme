@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Reactium
+Comment=A GTK theme inspired by Aero, Fusion, and Oxygen.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Reactium
+ButtonLayout=:minimize,maximize,close

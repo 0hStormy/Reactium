@@ -1,0 +1,24 @@
+window.titlebar.padding.width: 4
+window.titlebar.padding.height: 0
+
+window.button.width: 38
+window.button.height: 28
+window.button.spacing: 0
+
+window.*.title.bg: Gradient Vertical
+window.*.title.bg.color: #ffffff
+window.*.title.bg.colorTo: #CFDFE8
+window.inactive.label.text.color: #7e8b8e
+window.active.label.text.color: #292d2e
+
+border.width: 1
+window.active.border.color: #9cb0bb
+
+menu.items.bg.color: #303030
+menu.items.text.color: #ffffff
+menu.items.active.bg.color: #5d5d5d
+menu.items.active.text.color: #ffffff
+
+osd.bg.color: #303030
+osd.border.color: #030c17
+osd.label.text.color: #eeeeec
