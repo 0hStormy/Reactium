@@ -7,7 +7,12 @@ window.xfce4-panel button {
 }
 
 window.xfce4-panel button.flat {
+    border: solid 1px transparent;
     min-width: 36px;
+}
+
+window.xfce4-panel button.flat:checked {
+    border: solid 1px #ffffff;
 }
 
 window.xfce4-panel #whiskermenu-button {
@@ -39,8 +44,4 @@ window.xfce4-panel #whiskermenu-button box image {
 
 window.xfce4-panel #pulseaudio-button {
     min-width: 36px;
-}
-
-window.xfce4-panel #pulseaudio-button box image {
-    
 }
