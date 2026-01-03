@@ -26,6 +26,8 @@ dialog {
     background-image: linear-gradient(#ecf3fa, #c7d7db);
     border: 0px;
     color: #292d2e;
+    border: solid 1px #9cb0bb;
+    border-top-width: 0;
 }
 
 messagedialog,
@@ -33,6 +35,8 @@ dialog.message {
     background-image: linear-gradient(#ecf3fa, #c7d7db);
     color: #292d2e;
     border: 0px;
+    border: solid 1px #9cb0bb;
+    border-top-width: 0;
 }
 
 headerbar {
@@ -111,6 +115,22 @@ window.csd headerbar button.titlebutton {
     box-shadow: 0 1px 0 0 #ffffff;
 }
 
+dialog headerbar button.titlebutton {
+    min-height: 16px;
+
+    margin-top: -10px;
+
+    padding: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    -gtk-icon-source: none;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    border-top-width: 0;
+    box-shadow: 0 1px 0 0 #ffffff;
+}
+
 window.csd headerbar.titlebar {
     min-height: 32px;
 }
@@ -146,6 +166,44 @@ window.csd headerbar button.titlebutton.maximize {
 }
 
 window.csd headerbar button.titlebutton.minimize {
+    background-image:
+        url("assets/min.svg"),
+        linear-gradient(#ffffff, #cedee7);
+
+    background-size: 10px 3px, 100% 100%;
+}
+
+dialog headerbar button.titlebutton:hover {
+    border-color: #64abd1;
+    box-shadow: 0 0 4px 0 #64abd1;
+}
+
+dialog.csd headerbar button.titlebutton:active {
+    background-image: none;
+    border-color: #487892;
+    box-shadow: 0 0 2px 0 #64abd1, inset 0 0 4px 4px #c7d8e2;
+}
+
+dialog.csd headerbar button.titlebutton image {
+    opacity: 0;
+}
+
+dialog.csd headerbar button.titlebutton.close {
+    background-image:
+        url("assets/close.svg"),
+        linear-gradient(#ffffff, #cedee7);
+    background-size: 9px 8px, 100% 100%;
+}
+
+dialog.csd headerbar button.titlebutton.maximize {
+    background-image:
+        url("assets/max.svg"),
+        linear-gradient(#ffffff, #cedee7);
+
+    background-size: 10px 8px, 100% 100%;
+}
+
+dialog.csd headerbar button.titlebutton.minimize {
     background-image:
         url("assets/min.svg"),
         linear-gradient(#ffffff, #cedee7);
@@ -477,6 +535,11 @@ menubar {
     margin: 0;
 }
 
+headerbar menubar {
+    background-image: none;
+    border-bottom-width: 0;
+}
+
 menubar menuitem {
     color: #2f3c46;
     padding: 4px 12px;
@@ -565,6 +628,10 @@ frame {
 }
 
 frame > notebook {
+    padding: 4px;
+}
+
+box.vertical > frame {
     padding: 4px;
 }
 
@@ -869,4 +936,9 @@ paned > notebook {
 event {
     margin: 40px;
     padding: 0;
+}
+
+.pathbar button.toggle {
+    padding-left: 4px;
+    padding-right: 4px;
 }
