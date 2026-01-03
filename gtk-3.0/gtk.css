@@ -223,11 +223,6 @@ button {
     color: #292d2e;
 }
 
-button.suggested-action {
-    background-image: linear-gradient(#ffffff, #cee7ce);
-    border: solid 1px #8da38b;
-}
-
 button.destructive-action {
     background-image: linear-gradient(#ffffff, #e7cece);
     border: solid 1px #a38b8b;
@@ -236,11 +231,6 @@ button.destructive-action {
 button:hover {
     border-color: #64abd1;
     box-shadow: 0 0 4px 0 #64abd1;
-}
-
-button.suggested-action:hover {
-    border-color: #64d16d;
-    box-shadow: 0 0 4px 0 #64d166;
 }
 
 button.destructive-action:hover {
@@ -255,13 +245,6 @@ button:active {
     box-shadow: 0 0 2px 0 #64abd1;
 }
 
-button.suggested-action:active {
-    background-image: none;
-    background-image: linear-gradient(#c7e2c7 , #d3eecf);
-    border-color: #48924b;
-    box-shadow: 0 0 2px 0 #64d16d;
-}
-
 button.destructive-action:active {
     background-image: none;
     background-image: linear-gradient(#e2c7c7 , #eecfcf);
@@ -273,12 +256,6 @@ button:checked {
     background-image: none;
     background-image: linear-gradient(#c7d8e2 , #cfe3ee);
     border-color: #487892;
-}
-
-button.suggested-action:checked {
-    background-image: none;
-    background-image: linear-gradient(#c7e2c7 , #d3eecf);
-    border-color: #48924b;
 }
 
 button.destructive-action:checked {
@@ -627,6 +604,10 @@ frame {
     border: solid 1px #a8bac4;
 }
 
+frame > frame {
+    border-width: 0;
+}
+
 frame > notebook {
     padding: 4px;
 }
@@ -843,61 +824,58 @@ revealer box .linked > button {
 }
 
 .linked > button,
-.linked > .toggle {
+.linked > .toggle,
+.linked > entry,
+.linked > combobox {
     border: 1px solid #8b9ba3;
-    border-right-width: 0;
     border-radius: 0;
 }
 
-.linked > button:first-child,
-.linked > .toggle:first-child {
-    border-right-width: 0px;
+.linked.horizontal > button,
+.linked.horizontal > .toggle,
+.linked.horizontal > entry,
+.linked.horizontal > combobox {
+    border-right-width: 0;
+}
+
+.linked.horizontal > button:first-child,
+.linked.horizontal > .toggle:first-child,
+.linked.horizontal > entry:first-child,
+.linked.horizontal > combobox:first-child {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
 
-.linked > button:last-child,
-.linked > .toggle:last-child {
+.linked.horizontal > button:last-child,
+.linked.horizontal > .toggle:last-child,
+.linked.horizontal > entry:last-child,
+.linked.horizontal > combobox:last-child {
     border-right-width: 1px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
-headerbar .linked > button {
-    border-top-width: 0;
+.linked.vertical > button,
+.linked.vertical > .toggle,
+.linked.vertical > entry,
+.linked.vertical > combobox {
+    border-bottom-width: 0;
 }
 
-headerbar .linked > button:first-child,
-headerbar .linked > .toggle:first-child {
-    border-right-width: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 4px;
-}
-
-
-headerbar .linked > button:last-child,
-headerbar .linked > .toggle:last-child {
-    border-right-width: 1px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 4px;
-}
-
-.linked > combobox,
-.linked > .toggle {
-    border: 1px solid #8b9ba3;
-    border-right-width: 0;
-    border-radius: 0;
-}
-
-.linked > combobox:first-child {
-    border-right-width: 0px;
+.linked.vertical > button:first-child,
+.linked.vertical > .toggle:first-child,
+.linked.vertical > entry:first-child,
+.linked.vertical > combobox:first-child {
     border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
-.linked > combobox:last-child {
-    border-right-width: 1px;
-    border-top-right-radius: 4px;
+.linked.vertical > button:last-child,
+.linked.vertical > .toggle:last-child,
+.linked.vertical > entry:last-child,
+.linked.vertical > combobox:last-child {
+    border-bottom-width: 1px;
+    border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
@@ -906,23 +884,19 @@ headerbar .linked > .toggle:last-child {
     border-radius: 0;
 }
 
-.linked.horizontal > entry {
-    border: 1px solid #8b9ba3;
-    border-right-width: 0;
-    border-radius: 0;
+
+headerbar .linked.horizontal > button {
+    border-top-width: 0;
 }
 
-.linked.horizontal > entry:first-child {
-    border-right-width: 0px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+headerbar .linked.horizontal > button:first-child {
+    border-top-left-radius: 0;
 }
 
-.linked.horizontal > entry:last-child {
-    border-right-width: 1px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+headerbar .linked.horizontal > button:last-child {
+    border-top-right-radius: 0;
 }
+
 
 toolbar.horizontal {
     padding: 4px;
