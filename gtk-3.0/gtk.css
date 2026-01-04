@@ -22,7 +22,8 @@ window.csd {
     border-top-width: 0;
 }
 
-dialog {
+dialog,
+filechooser {
     background-image: linear-gradient(#ecf3fa, #c7d7db);
     border: 0px;
     color: #292d2e;
@@ -115,8 +116,15 @@ window.csd headerbar button.titlebutton {
     box-shadow: 0 1px 0 0 #ffffff;
 }
 
+dialog headerbar button {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: -4px;
+}
+
 dialog headerbar button.titlebutton {
     min-height: 16px;
+    margin: 0;
 
     margin-top: -10px;
 
@@ -595,7 +603,7 @@ list row:hover:not(:selected):not(:active) {
 paned > separator {
     min-width: 1px;
     min-height: 1px;
-    border: dotted 1px #c7d5da;
+    border: dotted 1px #666e74;
 }
 
 expander {
@@ -610,8 +618,8 @@ frame {
     border: solid 1px #a8bac4;
 }
 
-frame > frame {
-    border-width: 0;
+frame + frame {
+    border-top-width: 0;
 }
 
 frame > box > frame {
@@ -630,6 +638,18 @@ notebook {
     margin: 4px;
 }
 
+notebook > header.top,
+notebook > header.bottom {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+notebook > header.left,
+notebook > header.right {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
 notebook > header > tabs > tab {
     background-image: linear-gradient(#ffffff, #cedee7);
     border: solid 1px #8b9ba3;
@@ -641,8 +661,13 @@ notebook > header > tabs > tab {
     color: #292d2e;
 }
 
-notebook > header > tabs > tab button.flat {
+notebook > header > tabs > tab image {
     margin: 4px;
+}
+
+notebook > header > tabs > tab button.flat {
+    margin: 2px;
+    padding: 0;
 }
 
 notebook > header > tabs > tab:hover {
